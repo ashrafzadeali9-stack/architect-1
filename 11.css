@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  align-items: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+  margin-left: 25px;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1494526585095-c41746248156")
+    center/cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  max-width: 600px;
+  padding: 120px;
+}
+
+.hero-content button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+/* Projects */
+.projects {
+  padding: 80px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,.6);
+  color: white;
+  width: 100%;
+  padding: 15px;
+}
+
+/* Studio */
+.studio {
+  background: #111;
+  color: white;
+  padding: 90px;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: #eee;
+  padding: 25px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .hero-content {
+    padding: 60px;
+  }
+
+  .projects {
+    padding: 40px;
+  }
+}
